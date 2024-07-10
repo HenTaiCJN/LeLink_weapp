@@ -568,23 +568,35 @@
                 },
                 {
                     "kind": "block",
-                    "type": "get_ldr"
+                    "type": "hcsr",
+                    "inputs": {
+                        "value_road_trig": {
+                            "shadow": {
+                                "type": "pins"
+                            }
+                        },
+                        "value_road_echo": {
+                            "shadow": {
+                                "type": "pins"
+                            }
+                        },
+                        "value_road_port": {
+                            "shadow": {
+                                "type": "ports"
+                            }
+                        }
+                    }
                 },
                 {
                     "kind": "block",
-                    "type": "get_sound"
-                },
-                {
-                    "kind": "block",
-                    "type": "get_hall"
-                },
-                {
-                    "kind": "block",
-                    "type": "get_radar"
-                },
-                {
-                    "kind": "block",
-                    "type": "get_lightness"
+                    "type": "singlebutton",
+                    "inputs": {
+                        "value_road_": {
+                            "shadow": {
+                                "type": "port_all"
+                            }
+                        }
+                    }
                 },
                 {
                     "kind": "block",
@@ -592,7 +604,163 @@
                 },
                 {
                     "kind": "block",
-                    "type": "voice"
+                    "type": "dhtsensor",
+                    "inputs": {
+                        "value_road_": {
+                            "shadow": {
+                                "type": "port_all"
+                            }
+                        }
+                    }
+                },
+                {
+                    "kind": "block",
+                    "type": "ds18b20",
+                    "inputs": {
+                        "value_road_": {
+                            "shadow": {
+                                "type": "port_all"
+                            }
+                        }
+                    }
+                },
+                {
+                    "kind": "block",
+                    "type": "tsd",
+                    "inputs": {
+                        "value_road_": {
+                            "shadow": {
+                                "type": "port_all"
+                            }
+                        }
+                    }
+                },
+                {
+                    "kind": "block",
+                    "type": "lightsensor",
+                    "inputs": {
+                        "value_road_": {
+                            "shadow": {
+                                "type": "port_all"
+                            }
+                        }
+                    }
+                },
+                {
+                    "kind": "block",
+                    "type": "soundsensor",
+                    "inputs": {
+                        "value_road_": {
+                            "shadow": {
+                                "type": "port_all"
+                            }
+                        }
+                    }
+                },
+                {
+                    "kind": "block",
+                    "type": "compass_more",
+                    "inputs": {
+                        "value_road_sda": {
+                            "shadow": {
+                                "type": "pins"
+                            }
+                        },
+                        "value_road_scl": {
+                            "shadow": {
+                                "type": "pins"
+                            }
+                        },
+                        "value_road_port": {
+                            "shadow": {
+                                "type": "ports"
+                            }
+                        }
+                    }
+                },
+                {
+                    "kind": "block",
+                    "type": "atmos",
+                    "inputs": {
+                        "value_road_sda": {
+                            "shadow": {
+                                "type": "pins"
+                            }
+                        },
+                        "value_road_scl": {
+                            "shadow": {
+                                "type": "pins"
+                            }
+                        },
+                        "value_road_port": {
+                            "shadow": {
+                                "type": "ports"
+                            }
+                        }
+                    }
+                },
+                {
+                    "kind": "block",
+                    "type": "accelerometer",
+                    "inputs": {
+                        "value_road_sda": {
+                            "shadow": {
+                                "type": "pins"
+                            }
+                        },
+                        "value_road_scl": {
+                            "shadow": {
+                                "type": "pins"
+                            }
+                        },
+                        "value_road_port": {
+                            "shadow": {
+                                "type": "ports"
+                            }
+                        }
+                    }
+                },
+                {
+                    "kind": "block",
+                    "type": "rfid_init",
+                    "inputs": {
+                        "value_road_sda": {
+                            "shadow": {
+                                "type": "pins"
+                            }
+                        },
+                        "value_road_scl": {
+                            "shadow": {
+                                "type": "pins"
+                            }
+                        },
+                        "value_road_port": {
+                            "shadow": {
+                                "type": "ports"
+                            }
+                        }
+                    }
+                },
+                {
+                    "kind": "block",
+                    "type": "rfid",
+                    "inputs": {
+                        "value_road_sda": {
+                            "shadow": {
+                                "type": "pins"
+                            }
+                        },
+                        "value_road_scl": {
+                            "shadow": {
+                                "type": "pins"
+                            }
+                        },
+                        "value_road_port": {
+                            "shadow": {
+                                "type": "ports"
+                            }
+                        }
+                    }
                 }
             ]
         },
@@ -607,7 +775,7 @@
                 },
                 {
                     "kind": "block",
-                    "type": "lightness",
+                    "type": "motor_speed",
                     "inputs": {
                         "value_speed_": {
                             "shadow": {
@@ -616,16 +784,82 @@
                                     "NUM": "100"
                                 }
                             }
+                        },
+                        "value_road_in0": {
+                            "shadow": {
+                                "type": "pins"
+                            }
+                        },
+                        "value_road_in1": {
+                            "shadow": {
+                                "type": "pins"
+                            }
                         }
                     }
                 },
                 {
                     "kind": "block",
-                    "type": "light_on"
+                    "type": "play_tone",
+                    "inputs": {
+                        "value_tone_": {
+                            "shadow": {
+                                "type": "text",
+                                "fields": {
+                                    "TEXT": "[2000,3000]"
+                                }
+                            }
+                        },
+                        "value_delay_": {
+                            "shadow": {
+                                "type": "math_number",
+                                "fields": {
+                                    "NUM": "1"
+                                }
+                            }
+                        },
+                        "value_road_": {
+                            "shadow": {
+                                "type": "port_all"
+                            }
+                        }
+                    }
                 },
                 {
                     "kind": "block",
-                    "type": "light_off"
+                    "type": "servo_move",
+                    "inputs": {
+                        "value_angle_": {
+                            "shadow": {
+                                "type": "math_number",
+                                "fields": {
+                                    "NUM": "90"
+                                }
+                            }
+                        },
+                        "value_road_": {
+                            "shadow": {
+                                "type": "port_all"
+                            }
+                        }
+                    }
+                },
+                {
+                    "kind": "block",
+                    "type": "oled_clear"
+                },
+                {
+                    "kind": "block",
+                    "type": "oled_print",
+                    "inputs": {
+                        "value_str_": {
+                            "shadow": {
+                                "type": "text",
+                                "fields": {
+                                    "TEXT": "Hello World!"
+                                }
+                            }
+                        }
+                    }
                 },
                 {
                     "kind": "block",
@@ -662,78 +896,21 @@
                                     "NUM": "0"
                                 }
                             }
-                        }
-                    }
-                },
-                {
-                    "kind": "block",
-                    "type": "play_tone",
-                    "inputs": {
-                        "value_tone_": {
-                            "shadow": {
-                                "type": "text",
-                                "fields": {
-                                    "TEXT": "[2000,3000]"
-                                }
-                            }
                         },
-                        "value_delay_": {
+                        "value_road_port": {
                             "shadow": {
-                                "type": "math_number",
-                                "fields": {
-                                    "NUM": "1"
-                                }
+                                "type": "ports"
                             }
                         }
                     }
                 },
                 {
                     "kind": "block",
-                    "type": "char",
+                    "type": "rgb_clear",
                     "inputs": {
-                        "value_str_": {
+                        "value_road_port": {
                             "shadow": {
-                                "type": "text",
-                                "fields": {
-                                    "TEXT": "a"
-                                }
-                            }
-                        }
-                    }
-                },
-                {
-                    "kind": "block",
-                    "type": "carousel",
-                    "inputs": {
-                        "value_str_": {
-                            "shadow": {
-                                "type": "text",
-                                "fields": {
-                                    "TEXT": "abcd"
-                                }
-                            }
-                        },
-                        "value_speed_": {
-                            "shadow": {
-                                "type": "math_number",
-                                "fields": {
-                                    "NUM": "10"
-                                }
-                            }
-                        }
-                    }
-                },
-                {
-                    "kind": "block",
-                    "type": "carousel_stop"
-                },
-                {
-                    "kind": "block",
-                    "type": "set_light_matrix",
-                    "inputs": {
-                        "value_matrix_": {
-                            "block": {
-                                "type": "matrix_led_matrix"
+                                "type": "ports"
                             }
                         }
                     }
@@ -830,41 +1007,16 @@
                             }
                         }
                     }
-                }
-            ]
-        },
-        {
-            "kind": "category",
-            "name": "广播",
-            "categorystyle": "broadcast_category",
-            "contents": [
-                {
-                    "kind": "block",
-                    "type": "radio_init",
-                    "inputs": {
-                        "value_ssid_": {
-                            "shadow": {
-                                "type": "math_number",
-                                "fields": {
-                                    "NUM": "1"
-                                }
-                            }
-                        }
-                    }
                 },
                 {
                     "kind": "block",
-                    "type": "radio_switch"
-                },
-                {
-                    "kind": "block",
-                    "type": "radio_send",
+                    "type": "webcamera_conn",
                     "inputs": {
-                        "value_msg_": {
+                        "value_id_": {
                             "shadow": {
                                 "type": "text",
                                 "fields": {
-                                    "TEXT": "abc"
+                                    "TEXT": ""
                                 }
                             }
                         }
@@ -872,66 +1024,40 @@
                 },
                 {
                     "kind": "block",
-                    "type": "radio_setcb"
-                },
-                {
-                    "kind": "block",
-                    "type": "radio_recv"
+                    "type": "webcamera_res"
                 }
             ]
         },
         {
             "kind": "category",
-            "name": "时间",
-            "categorystyle": "interval_category",
+            "name": "引脚",
+            "categorystyle": "pin_category",
             "contents": [
                 {
                     "kind": "block",
-                    "type": "time_init"
+                    "type": "pin_read_digital"
                 },
                 {
                     "kind": "block",
-                    "type": "time_get"
+                    "type": "pin_write_digital"
                 },
                 {
                     "kind": "block",
-                    "type": "alarm",
+                    "type": "pin_read_analog"
+                },
+                {
+                    "kind": "block",
+                    "type": "pin_write_analog",
                     "inputs": {
-                        "value_h_": {
+                        "value_pwm_": {
                             "shadow": {
                                 "type": "math_number",
                                 "fields": {
-                                    "NUM": "15"
-                                }
-                            }
-                        },
-                        "value_m_": {
-                            "shadow": {
-                                "type": "math_number",
-                                "fields": {
-                                    "NUM": "07"
+                                    "NUM": "0"
                                 }
                             }
                         }
                     }
-                },
-                {
-                    "kind": "block",
-                    "type": "interval",
-                    "inputs": {
-                        "value_s_": {
-                            "shadow": {
-                                "type": "math_number",
-                                "fields": {
-                                    "NUM": "1"
-                                }
-                            }
-                        }
-                    }
-                },
-                {
-                    "kind": "block",
-                    "type": "interval_stop"
                 }
             ]
         }

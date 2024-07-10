@@ -12,11 +12,10 @@ import toolbox from '@/components/Blockly/config/toolbox.json'
 import '@/components/Blockly/customBlocks/func'
 import '@/components/Blockly/customBlocks/var'
 import '@/components/Blockly/customBlocks/dict'
+import '@/components/Blockly/customBlocks/pin'
 import '@/components/Blockly/customBlocks/input'
 import '@/components/Blockly/customBlocks/output'
 import '@/components/Blockly/customBlocks/network'
-import '@/components/Blockly/customBlocks/radio'
-import '@/components/Blockly/customBlocks/time'
 
 import {onMounted, ref} from "vue";
 import {WorkspaceSvg} from "blockly/core/workspace_svg";
@@ -125,7 +124,7 @@ function save() {
 
 function codeLookOpen() {
     codeLook.value = true
-    codeLookContent.value = pythonGenerator.workspaceToCode(workspace)
+    // codeLookContent.value = pythonGenerator.workspaceToCode(workspace)
 }
 
 </script>

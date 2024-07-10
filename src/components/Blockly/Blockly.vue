@@ -124,7 +124,7 @@ function save() {
 
 function codeLookOpen() {
     codeLook.value = true
-    // codeLookContent.value = pythonGenerator.workspaceToCode(workspace)
+    codeLookContent.value = pythonGenerator.workspaceToCode(workspace)
 }
 
 </script>

@@ -23,7 +23,7 @@ import {pythonGenerator} from "blockly/python";
 import {ElMessage} from "element-plus";
 import {CaretRight, Checked, Search} from "@element-plus/icons-vue";
 
-let mainUrl='https://cloud.leihoorobot.com/w/lelink_weapp/index.html'
+let mainUrl='https://cloud.leihoorobot.com/w/lelink_weapp/dist/index.html'
 let props = {data: {index: 'cloud-0', item: {xml: '<xml xmlns="https://developers.google.com/blockly/xml"></xml>'}}}
 
 let blocklyId = props.data.index
